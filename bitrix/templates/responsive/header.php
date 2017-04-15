@@ -74,12 +74,13 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 							<a class="not-show" href="#">продолжить и больше не показывать</a>
 						</div>
 					</div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <a href="/" title="На главную" class="logo-top">
-                            «ТутКирпич.ру» — строительные материалы <span id="top-logo-text"></span> по самым выгодным ценам
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
+<!--                    <div class="col-md-2 col-sm-12 col-xs-12">-->
+<!--                        <a href="/" title="На главную" class="logo-top">-->
+<!--                             <span id="top-logo-text"></span>-->
+<!--                        </a>-->
+<!--                    </div>-->
+                    <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                     	<?
 						if ( CModule::IncludeModule("iblock") ):
 							$arFilter = Array("IBLOCK_ID"=>8, "ACTIVE"=>"Y");
@@ -136,64 +137,65 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 							<?endif;?>
 						<?endif;?>
                     </div>
-                    <div class="col-md-2 col-sm-12 col-xs-12">
-                        <div class="cart-container">
-                            <a href="/cart/" style="float:left;">
-                                <img src="/images/cart.png" height="45">
-                            </a>
-                            <span>Корзина (<?=count($_SESSION['CART']);?>)</span>
-                            <?CModule::IncludeModule('iblock');?>
-							<?$price=0;?>
-								<?foreach($_SESSION['CART'] as $key=>$arItem):?>
-									<?
-										$arSelect = Array("ID", "IBLOCK_ID", "NAME","PREVIEW_PICTURE","PROPERTY_*");
-										$arFilter = Array("IBLOCK_ID"=>3,"ID"=>$key);
-										$res = CIBlockElement::GetList(Array(), $arFilter, false, $arSelect);
-										while($ob = $res->GetNextElement()){
-											$arFields = $ob->GetFields();  
-											$arProps = $ob->GetProperties();
-                                            $retail_price = (float)str_replace(",", ".", $arProps['RETAIL_PRICE']['VALUE']);
-											?>
-											<?$price+=$retail_price*$arItem;?>
-											
-									<?
-										}
-									?>
-								<?endforeach;?>
-                            <br>
-                            <span class="price"><?=number_format($price, 2, '.', ' ')?> <i class="fa fa-rub" aria-hidden="true"></i></span>
-                        </div>
-                    </div>
-					<div class="col-md-3 col-sm-12 col-xs-12 top-info-phone">
-                        <?$APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							"",
-							Array(
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => "/inc/phone-pict.php",
-								"EDIT_TEMPLATE" => ""
-							),
-						false
-						);?>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
                         <a id="callback" href="javascript:void(0)">Заказать звонок!</a>
+                        <!-------------КОРЗИНА------------>
+<!--                        <div class="cart-container">-->
+<!--                            <a href="/cart/" style="float:left;">-->
+<!--                                <img src="/images/cart.png" height="45">-->
+<!--                            </a>-->
+<!--                            <span>Корзина (--><?//=count($_SESSION['CART']);?><!--)</span>-->
+<!--                            --><?//CModule::IncludeModule('iblock');?>
+<!--							--><?//$price=0;?>
+<!--								--><?//foreach($_SESSION['CART'] as $key=>$arItem):?>
+<!--									--><?//
+//										$arSelect = Array("ID", "IBLOCK_ID", "NAME","PREVIEW_PICTURE","PROPERTY_*");
+//										$arFilter = Array("IBLOCK_ID"=>3,"ID"=>$key);
+//										$res = CIBlockElement::GetList(Array(), $arFilter, false, $arSelect);
+//										while($ob = $res->GetNextElement()){
+//											$arFields = $ob->GetFields();
+//											$arProps = $ob->GetProperties();
+//                                            $retail_price = (float)str_replace(",", ".", $arProps['RETAIL_PRICE']['VALUE']);
+//											?>
+<!--											--><?//$price+=$retail_price*$arItem;?>
+<!--											-->
+<!--									--><?//
+//										}
+//									?>
+<!--								--><?//endforeach;?>
+<!--                            <br>-->
+<!--                            <span class="price">--><?//=number_format($price, 2, '.', ' ')?><!-- <i class="fa fa-rub" aria-hidden="true"></i></span>-->
+<!--                        </div>-->
+                        <!-------------END КОРЗИНА------------>
+
                     </div>
+<!--					<div class="col-md-3 col-sm-12 col-xs-12 top-info-phone">-->
+<!--<!--                        --><?////$APPLICATION->IncludeComponent(
+////							"bitrix:main.include",
+////							"",
+////							Array(
+////								"AREA_FILE_SHOW" => "file",
+////								"PATH" => "/inc/phone-pict.php",
+////								"EDIT_TEMPLATE" => ""
+////							),
+////						false
+////						);?>
+<!--                        <!--<a id="callback" href="javascript:void(0)">Заказать звонок!</a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
         <div id="bottom_header">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-2 col-sm-12 col-xs-12 hidden-xs">
+                    <div class="col-md-3 col-sm-12 col-xs-12 hidden-xs">
                         <div id="logo">
                             <a href="/" title="кирпич в Саранске">
-                                <img src="/images/tut-kirpich.png" border="0" width="" height="" alt="ООО Микстрейд"><br>Ищете кирпич? 
-                                  <br>
-                                 А он тут — на ТутКирпич.ру
+                                <img src="/images/logo.png" border="0" width="" height="" alt="ООО Микстрейд">
                             </a>
                         </div>
-                        <hr class="bottom-hr">
                     </div>
-                	<div class="col-xs-12 col-sm-12 col-md-10">
+                	<div class="col-xs-12 col-sm-12 col-md-9">
                 	 	<div class="row">
 		                    <div class="col-md-10 col-sm-12 col-xs-12">
 		                        <!--Меню-->
