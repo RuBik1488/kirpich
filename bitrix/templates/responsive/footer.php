@@ -18,7 +18,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                         "EDIT_TEMPLATE" => ""
                                     ),
                                 false
-                        );?33>
+                        );?>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sm-12">
                             <div class="pull-right footer-phone">
