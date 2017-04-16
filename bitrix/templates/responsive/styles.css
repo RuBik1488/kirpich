@@ -11,9 +11,12 @@
     /*src: local("PT Sans Narrow"), local("PTSans-Narrow"), url("http://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4aCdjWF5QMA3Tf82kxWkPB0.woff2") format("woff2"), url("http://fonts.gstatic.com/s/ptsansnarrow/v7/UyYrYy3ltEffJV9QueSi4S4mX3cpNo8MnLri8k21-rs.woff") format("woff");*/
 /*}*/
 
+
+
 @font-face {
     font-family: "HeliosCondRegular";
     src: url("/bitrix/templates/responsive/fonts/HeliosCondRegular/HeliosCondRegular.eot");
+    src: url("/bitrix/templates/responsive/fonts/HeliosCondRegular/HeliosCondRegular.eot?#iefix")format("embedded-opentype"),
     url("/bitrix/templates/responsive/fonts/HeliosCondRegular/HeliosCondRegular.woff") format("woff"),
     url("/bitrix/templates/responsive/fonts/HeliosCondRegular/HeliosCondRegular.ttf") format("truetype");
     font-style: normal;
