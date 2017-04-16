@@ -95,8 +95,9 @@ h3 {
     margin-left: 0px;
     align-items: center;
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 900;
+    font-family: "HeliosCondRegular";
 }
 .wr_left_menu {
     margin-top:-60px;
@@ -189,7 +190,8 @@ select {
     text-transform: uppercase;
     font-weight: bolder;
     color: #333333;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: "HeliosCondRegular";
 }
 #top_header .cart-container span {
 	color:#fff;
@@ -221,9 +223,10 @@ select {
 }
 #top_header #callback {
 	color: #333;
-	font-size: 16px;
+	font-size: 20px;
 	float: left;
 	margin-top: 5px;
+    font-family: "HeliosCondRegular";
 }
 #logo {
     margin-top: -20px;
@@ -328,12 +331,13 @@ select {
     border-top: 1px solid #ffdbca;
     color: #333;
     display: block;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     line-height: 22px;
     outline: medium none;
     padding: 10px 0 10px 20px;
     text-decoration: none;
+    font-family: "HeliosCondRegular";
 }
 
 
@@ -349,6 +353,7 @@ select {
     outline: medium none;
     text-transform: none;
     vertical-align: middle;
+    font-family: "HeliosCondRegular";
 }
 #left-menu2 a {
     background: url("/images/li.png") no-repeat scroll 10px center rgba(0, 0, 0, 0) !important;
@@ -362,6 +367,8 @@ select {
     padding: 10px 0 10px 20px !important;
     text-decoration: none !important;
     text-transform: uppercase !important;
+    font-family: "HeliosCondRegular";
+
 }
 #left-menu2 ul a {
     background: url("/images/li3.png") no-repeat scroll 10px center #ffebd8 !important;
@@ -371,6 +378,7 @@ select {
     outline: medium none !important;
     text-transform: none !important;
     vertical-align: middle !important;
+    font-family: "HeliosCondRegular";
 }
 #left-menu li.current {
     display: block;
@@ -389,6 +397,7 @@ select {
     font-style: normal;
     padding-left: 20px;
     vertical-align: middle;
+    font-family: "HeliosCondRegular";
 }
 #left-menu2 .current a {
     background: url("/images/a2.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
@@ -450,6 +459,7 @@ select {
 }
 #left-menu ul.child-ul li a {
     padding-left: 30px;
+    font-family: "HeliosCondRegular";
 }
 #left-menu .selected ul li a:hover {
     background: url("/images/li2.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
@@ -483,9 +493,10 @@ select {
 }
 .wr_phone span a{
     color: #ff4000;
-    font-size: 22px;
+    font-size: 28px;
     text-decoration: none;
     margin-left: 10px;
+    font-family: "HeliosCondRegular";
 }
 
 .newbe {
