@@ -99,8 +99,7 @@ h3 {
     font-weight: 900;
 }
 .wr_left_menu {
-    position: absolute;
-    margin-left: 23px;
+    margin-top:-60px;
 }
 .clear {
     clear: both !important;
@@ -479,12 +478,12 @@ select {
 .wr_phone {
     display: flex;
     flex-flow: center;
-    margin-top: 2px;
+    margin-top: 34px;
     font-weight: 900;
 }
 .wr_phone span a{
     color: #ff4000;
-    font-size: 28px;
+    font-size: 22px;
     text-decoration: none;
     margin-left: 10px;
 }

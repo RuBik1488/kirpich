@@ -194,41 +194,6 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                                 <img src="/images/logo.png" border="0" width="" height="" alt="ООО Микстрейд">
                             </a>
                         </div>
-
-
-                        <div class="wr_left_menu">
-                        <a href="/catalog/" class="catalog-sidbar-link"><span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">Каталог продукции</span></a>
-                        <?/*?>
-							<button type="button" class="navbar-toggle  left-menu-toogle" data-target="#left-menu">
-		                                        <span class="icon-bar"></span>
-		                                        <span class="icon-bar"></span>
-		                                        <span class="icon-bar"></span>
-		                                    </button>
-<?// */?>
-                        <?$APPLICATION->IncludeComponent(
-                            "bitrix:catalog.section.list",
-                            "left_menu",
-                            Array(
-                                "IBLOCK_TYPE" => "tcatalog",
-                                "IBLOCK_ID" => "3",
-                                "SECTION_ID" => $_REQUEST["SECTION_ID"],
-                                "SECTION_CODE" => "",
-                                "SECTION_URL" => "",
-                                "COUNT_ELEMENTS" => "N",
-                                "TOP_DEPTH" => "2",
-                                "SECTION_FIELDS" => array(),
-                                "SECTION_USER_FIELDS" => array(),
-                                "ADD_SECTIONS_CHAIN" => "N",
-                                "CACHE_TYPE" => "A",
-                                "CACHE_TIME" => "36000000",
-                                "CACHE_GROUPS" => "Y"
-                            ),
-                            false
-                        );?>
-                        <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
-                        </div>
-
-
                     </div>
                 	<div class="col-md-6 col-xs-12 col-sm-12">
                 	 	<div class="row">
@@ -323,6 +288,7 @@ jQuery(document).ready(function(){
                 </div>
             </div>
         </div>
+    </div>
     </header>
     <div class="wrapper">
         <div class="content">
@@ -330,37 +296,37 @@ jQuery(document).ready(function(){
              	<div class="row">
              		 <div class="col-md-3 col-sm-3 col-xs-12" id="left_sidebar">
 
-<!--                         <div>-->
-<!--						 <a href="/catalog/" class="catalog-sidbar-link"><span class="h2_span --><?//if( $city != "" && CSite::InDir('/index.php') ):?><!--<!--mobile_scroll--><?//endif;?><!--<!--">Каталог продукции</span></a>-->
-<?/////*?>
-<!--							<button type="button" class="navbar-toggle  left-menu-toogle" data-target="#left-menu">-->
-<!--		                                        <span class="icon-bar"></span>-->
-<!--		                                        <span class="icon-bar"></span>-->
-<!--		                                        <span class="icon-bar"></span>-->
-<!--		                                    </button>-->
-<?//// */?>
-<!--                            --><?//$APPLICATION->IncludeComponent(
-//								"bitrix:catalog.section.list",
-//								"left_menu",
-//								Array(
-//									"IBLOCK_TYPE" => "tcatalog",
-//									"IBLOCK_ID" => "3",
-//									"SECTION_ID" => $_REQUEST["SECTION_ID"],
-//									"SECTION_CODE" => "",
-//									"SECTION_URL" => "",
-//									"COUNT_ELEMENTS" => "N",
-//									"TOP_DEPTH" => "2",
-//									"SECTION_FIELDS" => array(),
-//									"SECTION_USER_FIELDS" => array(),
-//									"ADD_SECTIONS_CHAIN" => "N",
-//									"CACHE_TYPE" => "A",
-//									"CACHE_TIME" => "36000000",
-//									"CACHE_GROUPS" => "Y"
-//								),
-//							false
-//							);?>
-<!--                           <div class="cart-open --><?//if($_SESSION['NO_SHOW']==1) echo 'closed';?><!--<!--"></div>-->
-<!--                         </div>-->
+                         <div class="wr_left_menu">
+						 <a href="/catalog/" class="catalog-sidbar-link"><span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">Каталог продукции</span></a>
+<?///*?>
+							<button type="button" class="navbar-toggle  left-menu-toogle" data-target="#left-menu">
+		                                        <span class="icon-bar"></span>
+		                                        <span class="icon-bar"></span>
+		                                        <span class="icon-bar"></span>
+		                                    </button>
+<?// */?>
+                            <?$APPLICATION->IncludeComponent(
+								"bitrix:catalog.section.list",
+								"left_menu",
+								Array(
+									"IBLOCK_TYPE" => "tcatalog",
+									"IBLOCK_ID" => "3",
+									"SECTION_ID" => $_REQUEST["SECTION_ID"],
+									"SECTION_CODE" => "",
+									"SECTION_URL" => "",
+									"COUNT_ELEMENTS" => "N",
+									"TOP_DEPTH" => "2",
+									"SECTION_FIELDS" => array(),
+									"SECTION_USER_FIELDS" => array(),
+									"ADD_SECTIONS_CHAIN" => "N",
+									"CACHE_TYPE" => "A",
+									"CACHE_TIME" => "36000000",
+									"CACHE_GROUPS" => "Y"
+								),
+							false
+							);?>
+                           <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
+                         </div>
                         </div>
                         <div class="col-md-6 col-sm-9 col-xs-12 <?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
 							<span class="h1_span <?if( $pathArr[1] == "catalog" && $pathArr[3] != "" ):?>detail_page_title<?endif;?>"><?=$APPLICATION->ShowTitle(false)?></span>
