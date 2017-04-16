@@ -54,7 +54,7 @@
 }
 
 a:link, a:visited {
-    color: #000;
+    color: #333;
     outline: medium none;
     text-decoration: none;
 }
@@ -91,12 +91,16 @@ h3 {
     background: #ff9100;
     height: 38px;
     margin-top: 16px;
-    width: 277px;
+    width: 297px;
     margin-left: 0px;
     align-items: center;
     padding-left: 20px;
     font-size: 20px;
     font-weight: 900;
+}
+.wr_left_menu {
+    position: absolute;
+    margin-left: 23px;
 }
 .clear {
     clear: both !important;
@@ -223,7 +227,6 @@ select {
 	margin-top: 5px;
 }
 #logo {
-	height: 135px;
     margin-top: -20px;
 }
 #logo a {
@@ -323,7 +326,6 @@ select {
     padding: 0;
 }
 #left-menu a {
-    background: url("/images/li.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
     border-top: 1px solid #ffdbca;
     color: #333;
     display: block;
@@ -333,7 +335,6 @@ select {
     outline: medium none;
     padding: 10px 0 10px 20px;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 
@@ -419,6 +420,11 @@ select {
     text-indent: 0;
 }
 #left-menu li {
+    background: #ffebd8;
+    width: 297px;
+    font-weight: 900;
+    font-size: 26px;
+    list-style-type: none;
 }
 #left-menu li li li {
 }
@@ -470,6 +476,19 @@ select {
 #left-menu .psevdo li a:hover {
     background: url("/images/li2.png") no-repeat scroll 10px center #ffe4cc;
 }
+.wr_phone {
+    display: flex;
+    flex-flow: center;
+    margin-top: 2px;
+    font-weight: 900;
+}
+.wr_phone span a{
+    color: #ff4000;
+    font-size: 28px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 .newbe {
     font-weight: bold;
 }
