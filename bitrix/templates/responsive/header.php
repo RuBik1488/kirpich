@@ -138,7 +138,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 						<?endif;?>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
-                        <a id="callback" href="javascript:void(0)">Заказать звонок!</a>
+                        <a id="callback" href="javascript:void(0)">Заказать звонок</a>
                         <!-------------КОРЗИНА------------>
 <!--                        <div class="cart-container">-->
 <!--                            <a href="/cart/" style="float:left;">-->
@@ -169,18 +169,17 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                         <!-------------END КОРЗИНА------------>
 
                     </div>
-<!--					<div class="col-md-3 col-sm-12 col-xs-12 top-info-phone">-->
-<!--<!--                        --><?////$APPLICATION->IncludeComponent(
-////							"bitrix:main.include",
-////							"",
-////							Array(
-////								"AREA_FILE_SHOW" => "file",
-////								"PATH" => "/inc/phone-pict.php",
-////								"EDIT_TEMPLATE" => ""
-////							),
-////						false
-////						);?>
-<!--                        <!--<a id="callback" href="javascript:void(0)">Заказать звонок!</a>-->
+<!--					<div class="top-info-phone">-->
+<!--                        --><?//$APPLICATION->IncludeComponent(
+//							"bitrix:main.include",
+//							"",
+//							Array(
+//								"AREA_FILE_SHOW" => "file",
+//								"PATH" => "/inc/phone-pict.php",
+//								"EDIT_TEMPLATE" => ""
+//							),
+//						false
+//						);?>
 <!--                    </div>-->
                 </div>
             </div>
@@ -195,9 +194,9 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                             </a>
                         </div>
                     </div>
-                	<div class="col-xs-12 col-sm-12 col-md-9">
+                	<div class="col-md-6 col-xs-12 col-sm-12">
                 	 	<div class="row">
-		                    <div class="col-md-10 col-sm-12 col-xs-12">
+		                    <div class="col-md-12 col-sm-12 col-xs-12">
 		                        <!--Меню-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.11/slideout.min.js"></script>
 <script>
@@ -268,28 +267,41 @@ jQuery(document).ready(function(){
 		                            </div> 
 		                        </div>
 		                    </div>
-		                    <div class="col-md-2 col-sm-12 col-xs-12">
-		                        <div id="header_banners">
-		                            <a id="get_kp_button2" class="mf btn btn-kirpich" href="javascript:void(0)">
-										ОНЛАЙН ЗАПРОС
-									</a>
-		                        </div>
-		                    </div>
-	                		
-                		</div>
-                		<hr class="bottom-hr">
-                	</div>
+                            <!-- <div class="col-md-2 col-sm-12 col-xs-12">
+                                 <div id="header_banners">
+                                     <a id="get_kp_button2" class="mf btn btn-kirpich" href="javascript:void(0)">
+                                         ОНЛАЙН ЗАПРОС
+                                     </a>
+                                 </div>
+                             </div>
+
+                		     </div>-->
+
+                	    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="wr_phone">
+                            <img src="/images/phone.png" alt="">
+                            <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
+                        </div>
+                        <div class="basket">
+                            <img src="/images/basket.png" alt="">
+                            <span>Корзина (33) 115455</span>
+                        </div>
                 </div>
             </div>
         </div>
+    </div>
     </header>
     <div class="wrapper">
         <div class="content">
              <div class="container-fluid">
              	<div class="row">
-             		 <div class="col-md-2 col-sm-3 col-xs-12" id="left_sidebar">
+             		 <div class="col-md-3 col-sm-3 col-xs-12" id="left_sidebar">
+
+                         <div class="wr_left_menu">
 						 <a href="/catalog/" class="catalog-sidbar-link"><span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">Каталог продукции</span></a>
-<?/*?>
+<?///*?>
 							<button type="button" class="navbar-toggle  left-menu-toogle" data-target="#left-menu">
 		                                        <span class="icon-bar"></span>
 		                                        <span class="icon-bar"></span>
@@ -316,9 +328,10 @@ jQuery(document).ready(function(){
 								),
 							false
 							);?>
-                            <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
+                           <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
+                         </div>
                         </div>
-                        <div class="col-md-10 col-sm-9 col-xs-12 <?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
+                        <div class="col-md-6 col-sm-9 col-xs-12 <?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
 							<span class="h1_span <?if( $pathArr[1] == "catalog" && $pathArr[3] != "" ):?>detail_page_title<?endif;?>"><?=$APPLICATION->ShowTitle(false)?></span>
                             <?if ( $APPLICATION->GetCurPage() != "/" ):?>
 	                            <?$APPLICATION->IncludeComponent(

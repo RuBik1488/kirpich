@@ -54,7 +54,7 @@
 }
 
 a:link, a:visited {
-    color: #000;
+    color: #333;
     outline: medium none;
     text-decoration: none;
 }
@@ -91,12 +91,16 @@ h3 {
     background: #ff9100;
     height: 38px;
     margin-top: 16px;
-    width: 277px;
+    width: 297px;
     margin-left: 0px;
     align-items: center;
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 900;
+    font-family: "HeliosCondRegular";
+}
+.wr_left_menu {
+    margin-top:-60px;
 }
 .clear {
     clear: both !important;
@@ -186,7 +190,8 @@ select {
     text-transform: uppercase;
     font-weight: bolder;
     color: #333333;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: "HeliosCondRegular";
 }
 #top_header .cart-container span {
 	color:#fff;
@@ -217,13 +222,14 @@ select {
 	float: left;
 }
 #top_header #callback {
-	color: #333;
-	font-size: 16px;
-	float: left;
-	margin-top: 5px;
+    color: #333;
+    font-size: 18px;
+    float: left;
+    margin-top: 5px;
+    font-family: "HeliosCondRegular";
+    text-transform: uppercase;
 }
 #logo {
-	height: 135px;
     margin-top: -20px;
 }
 #logo a {
@@ -248,9 +254,8 @@ select {
 }
 #search_box_container .input {
     background: none repeat scroll 0 0 #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 4px;
-    box-shadow: 0 3px 6px 0 rgba(215, 215, 215, 0.7) inset;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: normal;
@@ -276,45 +281,51 @@ select {
     cursor: pointer;
     display: inline-block;
     height: 31px;
-    margin-top: 6px;
+    margin-top: 5px;
     position: absolute;
     right: 10px;
     top: 0;
     width: 36px;
 }
 #navbar {
-	padding: 0;
-	margin-top: 20px;
+	/*padding: 0;*/
+	/*margin-top: 20px;*/
 }
 #navbar ul li:first-of-type a {
-	border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    /*border-bottom-left-radius: 5px;*/
+    /*border-top-left-radius: 5px;*/
 }
 #navbar ul li:last-of-type a {
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    /*border-bottom-right-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
 }
 #navbar ul li a {
-	background: url("/images/na.gif") repeat-x scroll left center rgba(0, 0, 0, 0);
-    color: #000;
-    display: block;
-    font-size: 12pt;
-    padding: 10px 12px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100%;
+    /*background: url("/images/na.gif") repeat-x scroll left center rgba(0, 0, 0, 0);*/
+    /*color: #000;*/
+    /*display: block;*/
+    /*font-size: 12pt;*/
+    /*padding: 10px 12px;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    /*text-transform: uppercase;*/
+    /*width: 100%;*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*font-size: 18px;*/
+    /*font-weight: 900;*/
+    /*list-style-type: none;*/
+    /*justify-content: space-between;*/
+    /*padding: 0;*/
 }
 #navbar ul li.active a {
-	background: url("/images/a.gif") repeat-x scroll left center rgba(0, 0, 0, 0);
-    color: #fff;
+    color: #ff4000;
 }
 #navbar ul li a:hover {
-    background: url("/images/hover.gif") repeat-x scroll left center rgba(0, 0, 0, 0);
-    color: #fff;
+    /*background: url("/images/hover.gif") repeat-x scroll left center rgba(0, 0, 0, 0);*/
+    /*color: #fff;*/
 }
 #navbar ul li{
-	border-right: 1px solid #fff;
+	/*border-right: 1px solid #fff;*/
 }
 #left-menu,#left-menu2 {
     font-family: sans-serif, "PT Sans Narrow",;
@@ -323,17 +334,16 @@ select {
     padding: 0;
 }
 #left-menu a {
-    background: url("/images/li.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
     border-top: 1px solid #ffdbca;
     color: #333;
     display: block;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     line-height: 22px;
     outline: medium none;
     padding: 10px 0 10px 20px;
     text-decoration: none;
-    text-transform: uppercase;
+    font-family: "HeliosCondRegular";
 }
 
 
@@ -349,6 +359,7 @@ select {
     outline: medium none;
     text-transform: none;
     vertical-align: middle;
+    font-family: "HeliosCondRegular";
 }
 #left-menu2 a {
     background: url("/images/li.png") no-repeat scroll 10px center rgba(0, 0, 0, 0) !important;
@@ -362,6 +373,8 @@ select {
     padding: 10px 0 10px 20px !important;
     text-decoration: none !important;
     text-transform: uppercase !important;
+    font-family: "HeliosCondRegular";
+
 }
 #left-menu2 ul a {
     background: url("/images/li3.png") no-repeat scroll 10px center #ffebd8 !important;
@@ -371,6 +384,7 @@ select {
     outline: medium none !important;
     text-transform: none !important;
     vertical-align: middle !important;
+    font-family: "HeliosCondRegular";
 }
 #left-menu li.current {
     display: block;
@@ -389,6 +403,7 @@ select {
     font-style: normal;
     padding-left: 20px;
     vertical-align: middle;
+    font-family: "HeliosCondRegular";
 }
 #left-menu2 .current a {
     background: url("/images/a2.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
@@ -419,6 +434,11 @@ select {
     text-indent: 0;
 }
 #left-menu li {
+    background: #ffebd8;
+    width: 297px;
+    font-weight: 900;
+    font-size: 26px;
+    list-style-type: none;
 }
 #left-menu li li li {
 }
@@ -445,6 +465,7 @@ select {
 }
 #left-menu ul.child-ul li a {
     padding-left: 30px;
+    font-family: "HeliosCondRegular";
 }
 #left-menu .selected ul li a:hover {
     background: url("/images/li2.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
@@ -470,6 +491,20 @@ select {
 #left-menu .psevdo li a:hover {
     background: url("/images/li2.png") no-repeat scroll 10px center #ffe4cc;
 }
+.wr_phone {
+    display: flex;
+    flex-flow: center;
+    margin-top: 34px;
+    font-weight: 900;
+}
+.wr_phone span a{
+    color: #ff4000;
+    font-size: 28px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: "HeliosCondRegular";
+}
+
 .newbe {
     font-weight: bold;
 }
@@ -1012,6 +1047,27 @@ span.q_count {
 .see-mobile {
 	display: none !important;
 }
+
+.basket {
+    display: flex;
+    background: #ff9100;
+    height: 38px;
+    margin-top: 16px;
+    margin-left: 0px;
+    align-items: center;
+    width: 248px;
+}
+.basket img {
+    margin: 1px 0 0px 11px;
+    width: 29px;
+}
+.basket span {
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
 		font-size: 16px;
