@@ -803,28 +803,16 @@ a#back-top:hover {
     transition: all 0.2s ease-in-out 0s;
 }
 a#get_kp_button {
-    background: url("/images/tabs.png") repeat-x scroll center top rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    bottom: -28px;
-    box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.5);
-    color: #fff;
+    bottom: -8px;
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    height: 60px;
-    right: 30px;
-    padding-top: 5px;
+    right: 47px;
     position: fixed;
-    text-align: center;
     transition: all 0.2s ease-in-out 0s;
-    width: 260px;
+    width: 258px;
     z-index: 8000;
 }
-a#get_kp_button:hover {
-    background: url("/images/tabs.png") repeat-x scroll center top #ec3800;
-    bottom: -5px;
-    color: #000;
-}
+
 .modal_content {
     font-size: 20pt;
     padding: 10px 40px 0;
