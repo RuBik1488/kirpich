@@ -21,7 +21,7 @@
 </div>-->
 
 
-<div class="menu">
+<div id="navbar" class="menu">
     <ul>
         <?if (!empty($arResult)):?>
             <?

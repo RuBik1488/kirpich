@@ -169,18 +169,17 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                         <!-------------END КОРЗИНА------------>
 
                     </div>
-<!--					<div class="col-md-3 col-sm-12 col-xs-12 top-info-phone">-->
-<!--<!--                        --><?////$APPLICATION->IncludeComponent(
-////							"bitrix:main.include",
-////							"",
-////							Array(
-////								"AREA_FILE_SHOW" => "file",
-////								"PATH" => "/inc/phone-pict.php",
-////								"EDIT_TEMPLATE" => ""
-////							),
-////						false
-////						);?>
-<!--                        <!--<a id="callback" href="javascript:void(0)">Заказать звонок!</a>-->
+<!--					<div class="top-info-phone">-->
+<!--                        --><?//$APPLICATION->IncludeComponent(
+//							"bitrix:main.include",
+//							"",
+//							Array(
+//								"AREA_FILE_SHOW" => "file",
+//								"PATH" => "/inc/phone-pict.php",
+//								"EDIT_TEMPLATE" => ""
+//							),
+//						false
+//						);?>
 <!--                    </div>-->
                 </div>
             </div>
