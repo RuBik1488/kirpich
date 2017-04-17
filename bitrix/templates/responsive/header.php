@@ -138,7 +138,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 						<?endif;?>
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
-                        <a id="callback" href="javascript:void(0)">Заказать звонок!</a>
+                        <a id="callback" href="javascript:void(0)">Заказать звонок</a>
                         <!-------------КОРЗИНА------------>
 <!--                        <div class="cart-container">-->
 <!--                            <a href="/cart/" style="float:left;">-->
@@ -284,6 +284,10 @@ jQuery(document).ready(function(){
                         <div class="wr_phone">
                             <img src="/images/phone.png" alt="">
                             <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
+                        </div>
+                        <div class="basket">
+                            <img src="/images/basket.png" alt="">
+                            <span>Корзина (33) 115455</span>
                         </div>
                 </div>
             </div>

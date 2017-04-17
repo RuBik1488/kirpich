@@ -222,11 +222,12 @@ select {
 	float: left;
 }
 #top_header #callback {
-	color: #333;
-	font-size: 20px;
-	float: left;
-	margin-top: 5px;
+    color: #333;
+    font-size: 18px;
+    float: left;
+    margin-top: 5px;
     font-family: "HeliosCondRegular";
+    text-transform: uppercase;
 }
 #logo {
     margin-top: -20px;
@@ -253,9 +254,8 @@ select {
 }
 #search_box_container .input {
     background: none repeat scroll 0 0 #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 4px;
-    box-shadow: 0 3px 6px 0 rgba(215, 215, 215, 0.7) inset;
     box-sizing: border-box;
     font-size: 18px;
     font-weight: normal;
@@ -281,7 +281,7 @@ select {
     cursor: pointer;
     display: inline-block;
     height: 31px;
-    margin-top: 6px;
+    margin-top: 5px;
     position: absolute;
     right: 10px;
     top: 0;
@@ -1041,6 +1041,27 @@ span.q_count {
 .see-mobile {
 	display: none !important;
 }
+
+.basket {
+    display: flex;
+    background: #ff9100;
+    height: 38px;
+    margin-top: 16px;
+    margin-left: 0px;
+    align-items: center;
+    width: 248px;
+}
+.basket img {
+    margin: 1px 0 0px 11px;
+    width: 29px;
+}
+.basket span {
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
 		font-size: 16px;
