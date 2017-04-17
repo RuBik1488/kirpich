@@ -343,15 +343,31 @@
                                 <?if (!empty($arResult['PROPERTIES']['NORMA_ZAGRUZKI']['VALUE'])) {?>
                                     <label>Норма загрузки а/м: </label>
                                     <div id="normaZagr"><?= $arResult['PROPERTIES']['NORMA_ZAGRUZKI']['VALUE'] ?></div>
+
                                     <div style="clear: both;"></div>
                                 <?}?>
+                                <?
+                                preg_match("/шт. \/ (.*) м3/", $arResult['PROPERTIES']['NORMA_ZAGRUZKI']['VALUE'], $norm);
+                                preg_match("/\/ (.*) шт.$/", $arResult['PROPERTIES']['NORMA_ZAGRUZKI']['VALUE'], $norm2);
+                                if(isset($norm[1])){
+                                    $norma = str_replace(' ', '', $norm[1]);
+                                } elseif(isset($norm2[1])){
+                                    $norma = str_replace(' ', '', $norm2[1]);
+                                } else {
+                                    $norma = $poddon;
+                                }
+                                //
+                                ?>
                             </div>
                         </div>
+                        <?
+
+                        //print_r($arResult['PROPERTIES']); ?>
                         <div class="form-item" id="edit-qty-wrapper">
                             <label for="edit-qty">Единиц товара:</label>
                             <input type="hidden" value="<?= $arResult["ID"] ?>" id="detail_id_item">
                             <span class="count_minus " data-count="<?= $poddon ?>">-</span>
-                            <input id="edit-qty" data-qty="<?= $poddon ?>" data-step="<?= $poddon ?>" <?if (isset($sht)):?>data-sht="<?=$sht?>"<?endif;?> type="text" maxlength="6" name="quantity" size="5" value="<?= rtrim(rtrim(number_format($poddon, 2, '.', ' '),"0"),".") ?>" class="form-text required">
+                            <input id="edit-qty" data-qty="<?= $norma/*$poddon*/ ?>" data-step="<?= $poddon ?>" <?if (isset($sht)):?>data-sht="<?=$sht?>"<?endif;?> type="text" maxlength="6" name="quantity" size="5" value="<?= rtrim(rtrim(number_format($norma/*$poddon*/, 2, '.', ' '),"0"),".") ?>" class="form-text required">
                             <span class="count_plus" data-count="<?= $poddon ?>">+</span>
                         </div>
                         <br>
@@ -359,15 +375,16 @@
                         <div id="outprc">
                             <?
                                 $price = (float)str_replace(",", ".", $arResult['PROPERTIES']['RETAIL_PRICE']['VALUE']);
-                                $count = $poddon == 1 ? 1 : $poddon;
+                                //$count = $poddon == 1 ? 1 : $poddon;
+                                $count = $norma == 1 ? 1 : $norma;
                                 $pre_total = $price*$count;
                             ?>
                             <b><?=  rtrim(rtrim(number_format($pre_total, 2, '.', ' '),"0"),".") ?></b>
-                            <div class="equal lvl"> <i class="fa fa-rub" aria-hidden="true"></i> / <span><span class="poddon_count"><?= rtrim(rtrim(number_format($poddon, 2, '.', ' '),"0"),".") ?></span> <?=$measure?></span></div>
+                            <div class="equal lvl"> <i class="fa fa-rub" aria-hidden="true"></i> / <span><span class="poddon_count"><?= rtrim(rtrim(number_format($norma/*$poddon*/, 2, '.', ' '),"0"),".") ?></span> <?=$measure?></span></div>
                         </div>
                     </div>
                     <div id="crtbtns">
-                        <a href="javascript:void(0);" class="addCartButton mf" data-poddon="<?= $poddon ?>" data-id="<?= $arResult['ID']; ?>">В корзину</a>
+                        <a href="javascript:void(0);" class="addCartButton mf" data-poddon="<?= $norma/*$poddon*/ ?>" data-id="<?= $arResult['ID']; ?>">В корзину</a>
                         <a href="javascript:void(0);" class="fast_order">быстрый заказ</a>
                         <?php
                             $order = array(
@@ -375,7 +392,7 @@
                                 'items' => array(
                                     array(
                                         'title' => $arResult["NAME"],
-                                        'qty' => round($poddon),
+                                        'qty' => round($norma/*$poddon*/),
                                         'price' => (float)str_replace(",", ".", $arResult['PROPERTIES']['RETAIL_PRICE']['VALUE']),
                                     ),
                                 ),
