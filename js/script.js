@@ -134,15 +134,19 @@ $(document).ready(function(){
         detailCount(quantity, id);
     });
 
-   /* $("#edit-qty-wrapper #edit-qty").on('blur', function () {
+    $("#edit-qty-wrapper #edit-qty").on('blur', function () {
         var step = $(this).attr('data-step'),
             quantity = $(this).val(),
             id = $("#edit-qty-wrapper #detail_id_item").val();
+        	quantity = (Math.round(quantity/step))*step;
         if (quantity < 1) {
-            return false;
+            quantity = step;
+        	//return false;
         }
+
+        //alert(step);
         detailCount(quantity, id);
-    });*/
+    });
 
 	$('#sort_products').on('change', function(event) {
 		event.preventDefault();
