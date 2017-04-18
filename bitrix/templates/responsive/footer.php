@@ -37,7 +37,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     </div>
                 </div>
                 <a style="display: none;" id="back-top" title="Вверх"><img src="/images/chev.png"></a>
-                <a id="get_kp_button" class="mf" href="javascript:void(0)">Получить расчет стоимости</a>
+                <a id="get_kp_button" class="mf" href="javascript:void(0)"><img src="/images/sum.png" alt=""></a>
            </footer>
         </div>
         <div class="title-search-result"></div>
