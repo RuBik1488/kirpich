@@ -80,7 +80,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 <!--                        </a>-->
 <!--                    </div>-->
                     <div class="col-md-3 col-sm-12 col-xs-12"></div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
                     	<?
 						if ( CModule::IncludeModule("iblock") ):
 							$arFilter = Array("IBLOCK_ID"=>8, "ACTIVE"=>"Y");
@@ -137,7 +137,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 							<?endif;?>
 						<?endif;?>
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
                         <a id="callback" href="javascript:void(0)">Заказать звонок</a>
                         <!-------------КОРЗИНА------------>
 <!--                        <div class="cart-container">-->
@@ -193,6 +193,38 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                                 <img src="/images/logo.png" border="0" width="" height="" alt="ООО Микстрейд">
                             </a>
                         </div>
+                        <!---------------------------------------------------------------------------------->
+                        <div class="wr_phone_up">
+                            <img src="/images/phone.png" alt="">
+                            <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
+                        </div>
+                        <div class="nones">
+                            <div class="basket_up cart-container">
+
+                                <?CModule::IncludeModule('iblock');?>
+                                <?$price=0;?>
+                                <?foreach($_SESSION['CART'] as $key=>$arItem):?>
+                                    <?
+                                    $arSelect = Array("ID", "IBLOCK_ID", "NAME","PREVIEW_PICTURE","PROPERTY_*");
+                                    $arFilter = Array("IBLOCK_ID"=>3,"ID"=>$key);
+                                    $res = CIBlockElement::GetList(Array(), $arFilter, false, $arSelect);
+                                    while($ob = $res->GetNextElement()){
+                                        $arFields = $ob->GetFields();
+                                        $arProps = $ob->GetProperties();
+                                        $retail_price = (float)str_replace(",", ".", $arProps['RETAIL_PRICE']['VALUE']);
+                                        ?>
+                                        <?$price+=$retail_price*$arItem;?>
+
+                                        <?
+                                    }
+                                    ?>
+                                <?endforeach;?>
+
+                                <img src="/images/basket.png" alt="">
+                                <a href="/cart/"><span>Корзина (<?=count($_SESSION['CART']);?>) <?=number_format($price, 2, '.', ' ')?></span></a>
+                            </div>
+                        </div>
+                        <!---------------------------------------------------------------------------------->
                     </div>
                 	<div class="col-md-6 col-xs-12 col-sm-12">
                 	 	<div class="row">
@@ -284,9 +316,29 @@ jQuery(document).ready(function(){
                             <img src="/images/phone.png" alt="">
                             <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
                         </div>
-                        <div class="basket">
+                        <div class="basket cart-container">
+
+                            <?CModule::IncludeModule('iblock');?>
+                            <?$price=0;?>
+                            <?foreach($_SESSION['CART'] as $key=>$arItem):?>
+                                <?
+                                $arSelect = Array("ID", "IBLOCK_ID", "NAME","PREVIEW_PICTURE","PROPERTY_*");
+                                $arFilter = Array("IBLOCK_ID"=>3,"ID"=>$key);
+                                $res = CIBlockElement::GetList(Array(), $arFilter, false, $arSelect);
+                                while($ob = $res->GetNextElement()){
+                                    $arFields = $ob->GetFields();
+                                    $arProps = $ob->GetProperties();
+                                    $retail_price = (float)str_replace(",", ".", $arProps['RETAIL_PRICE']['VALUE']);
+                                    ?>
+                                    <?$price+=$retail_price*$arItem;?>
+
+                                    <?
+                                }
+                                ?>
+                            <?endforeach;?>
+
                             <img src="/images/basket.png" alt="">
-                            <span>Корзина (33) 115455</span>
+                            <a href="/cart/"><span>Корзина (<?=count($_SESSION['CART']);?>) <?=number_format($price, 2, '.', ' ')?></span></a>
                         </div>
                 </div>
             </div>
@@ -297,17 +349,10 @@ jQuery(document).ready(function(){
         <div class="content">
              <div class="container-fluid">
              	<div class="row">
-             		 <div class="col-md-3 col-sm-3 col-xs-12" id="left_sidebar">
+             		 <div class="col-md-3 col-sm-5 col-xs-12" id="left_sidebar">
 
                          <div class="wr_left_menu">
-						 <a href="/catalog/" class="catalog-sidbar-link"><span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">Каталог продукции</span></a>
-<?///*?>
-							<button type="button" class="navbar-toggle  left-menu-toogle" data-target="#left-menu">
-		                                        <span class="icon-bar"></span>
-		                                        <span class="icon-bar"></span>
-		                                        <span class="icon-bar"></span>
-		                                    </button>
-<?// */?>
+						 <span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>"><a href="/catalog/" class="catalog-sidbar-link">Каталог продукции</a></span>
                             <?$APPLICATION->IncludeComponent(
 								"bitrix:catalog.section.list",
 								"left_menu",
@@ -331,7 +376,7 @@ jQuery(document).ready(function(){
                            <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
                          </div>
                         </div>
-                        <div class="col-md-6 col-sm-9 col-xs-12 <?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
+                        <div class="col-md-9 col-sm-7 col-xs-12<?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
 							<span class="h1_span <?if( $pathArr[1] == "catalog" && $pathArr[3] != "" ):?>detail_page_title<?endif;?>"><?=$APPLICATION->ShowTitle(false)?></span>
                             <?if ( $APPLICATION->GetCurPage() != "/" ):?>
 	                            <?$APPLICATION->IncludeComponent(

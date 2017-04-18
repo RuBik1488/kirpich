@@ -84,7 +84,6 @@ h3 {
     color: #000;
     font-size: 2em;
     font-weight: 400;
-    line-height: 50px;
 }
 .h2_span {
     display: flex;
@@ -102,6 +101,9 @@ h3 {
 .wr_left_menu {
     margin-top:-60px;
 }
+wr_left_menu a span:hover{
+    color:#fff;
+}
 .clear {
     clear: both !important;
 }
@@ -114,7 +116,7 @@ p {
 }
 
 a:hover {
-    color: #ff6600;
+    color: #fff;
     text-decoration: underline;
 }
 a.btn-kirpich, a.btn-kirpich:focus {
@@ -496,8 +498,24 @@ select {
     flex-flow: center;
     margin-top: 34px;
     font-weight: 900;
+    align-items: center;
 }
 .wr_phone span a{
+    color: #ff4000;
+    font-size: 28px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: "HeliosCondRegular";
+}
+.wr_phone_up {
+    display: flex;
+    flex-flow: center;
+    margin-top: 34px;
+    font-weight: 900;
+    align-items: center;
+    display: none;
+}
+.wr_phone_up span a{
     color: #ff4000;
     font-size: 28px;
     text-decoration: none;
@@ -1055,6 +1073,26 @@ span.q_count {
     font-weight: bold;
     font-size: 15px;
 }
+.basket_up {
+    display: flex;
+    background: #ff9100;
+    height: 38px;
+    margin-top: 16px;
+    margin-left: 0px;
+    align-items: center;
+    width: 248px;
+    display: none;
+}
+.basket_up img {
+    margin: 1px 0 0px 11px;
+    width: 29px;
+}
+.basket_up span {
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
 
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
@@ -1066,10 +1104,31 @@ span.q_count {
         font-size: 14px;
     }
 }
-@media (min-width: 1100px) and (max-width: 1249px) {
+@media (max-width: 1249px) {
     #navbar ul li a {
         font-size: 13px;
-        padding: 10px 8px;
+        padding:0;
+    }
+    .col-md-9 {
+        width: 68%;
+        margin-left: 60px;
+    }
+
+    #search_box_container .input {
+        width: 460px;
+        margin-left: 60px;
+    }
+    .wr_phone span a {
+        font-size: 22px;
+    }
+    .menu {
+        margin-top:18px;
+    }
+    .wr_left_menu {
+        margin-top: -76px;
+    }
+    .wr_phone {
+        margin-top: 21px;
     }
 }
 @media (min-width: 992px) and (max-width: 1400px) {
@@ -1103,7 +1162,6 @@ span.q_count {
 @media (min-width: 992px) and (max-width: 1099px) {
     #navbar ul li a {
         font-size: 12px;
-        padding: 10px 8px;
     }
     .main-top-phone>span {
         font-size: 20px !important;
@@ -1120,10 +1178,10 @@ span.q_count {
 }
 @media (min-width: 768px) and (max-width: 992px) {
     #navbar ul li a {
-        font-size: 13px;
+        font-size: 17px;
     }
     #left-menu a, #left-menu .selected ul li a {
-        font-size: 12px;
+        font-size: 18px;
     }
     .h2_span {
         line-height: 25px;
@@ -1131,7 +1189,7 @@ span.q_count {
 }
 @media (min-width: 768px) and (max-width: 810px) {
     #navbar ul li a {
-        font-size: 12px;
+        font-size: 17px;
     }
 }
 @media (max-width: 1500px) {
@@ -1198,8 +1256,19 @@ span.q_count {
 		top: 0;
 		margin: 5px auto;
 	}
+    .wr_phone {
+        justify-content: flex-end;
+        font-size: 22px;
+    }
+    .basket {
+        margin-left: 36px;
+        width: 200px;
+    }
+    .basket span {
+        font-size: 13px;
+    }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	a.btn-kirpich {
 		font-size: 18px;
 		width: 300px;
@@ -1249,11 +1318,45 @@ span.q_count {
         font-size: 16px;
         padding: 6px 12px;
     }
+    #search_box_container .input {
+        width: inherit;
+        margin-left: inherit;
+    }
+
+    .wr_phone {
+        display: none;
+        }
+    .basket {
+        display: none;
+    }
+    .nones {
+        display: flex;
+        justify-content: center;
+    }
+    .basket_up {
+        display: flex;
+    }
+    .col-md-9 {
+        width: initial;
+        margin-left: initial;
+        width: 58%;
+    }
+    .wr_left_menu {
+        margin-top: 0px;
+    }
+    .wr_phone_up {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
 @media (max-width: 768px) {
 	.fancybox-inner {
 		overflow-y: auto !important;
 	}
+    .wr_phone {
+        display: none;
+    }
 	#left-menu li.its_parent {
 		position: relative;
 	}
@@ -1297,22 +1400,8 @@ span.q_count {
     #top_header {
         padding: 0px;
     }
-    #navbar ul li a:hover {
-        color: #333;
-    }
     #navbar {
-        border: 1px solid #ccc;
-        background: #fff;
-        -webkit-box-shadow: 0px 2px 2px 0px rgba(204,204,204,1);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(204,204,204,1);
-    box-shadow: 0px 2px 2px 0px rgba(204,204,204,1);
-
-        position: absolute;
-        z-index: 9999;
-        overflow: hidden;
-        margin-top: 0px;
-        width: 100%;
-
+        display: none;
     }
     #char_detail .prop-block-row>div {
         font-size: 13px;
@@ -1388,7 +1477,6 @@ span.q_count {
 @media (max-width: 1480px) and (min-width: 1330px) {
   #navbar ul li a {
     font-size: 14px;
-    padding: 10px 9px;
   }
 }
 @media (max-width: 1329px) and (min-width: 1160px) {
@@ -1397,14 +1485,24 @@ span.q_count {
     padding: 10px 8px;
   }
 }
+@media (max-width: 1252px) and (min-width: 1160px) {
+    #navbar ul li a {
+        padding:0;
+    }
+}
+
 @media (max-width: 1159px) and (min-width: 992px) {
   #navbar ul li a {
     font-size: 12px;
-    padding: 10px 5px;
   }
 }
 .catalog-section .product .product-name {
   margin-top:5px;
+    font-weight: 600;
+    text-align: center;
+}
+.catalog-section .product .product-name a:hover{
+    color:#ff6600;
 }
 /**/
 @media (max-width: 768px) {
@@ -1412,7 +1510,6 @@ span.q_count {
     display:none;
   }
   header .center-header-block {
-    height:50px !important;
     margin-top:10px;
   }
   header #bottom_header nav {
@@ -1423,12 +1520,15 @@ span.q_count {
   header #bottom_header nav .navbar-header button {
     float:left;
   }
-  header #bottom_header #search_box_container {
-    padding-left:50px;
-    margin-top:-45px;
-  }
+
 }
-/**/
+@media (max-width: 766px) {
+    .hidden-xs {
+        display: block;
+    }
+}
+
+    /**/
 body {
   width: 100%;
   height: 100%;
