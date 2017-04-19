@@ -376,7 +376,7 @@ jQuery(document).ready(function(){
                            <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
                          </div>
                         </div>
-                        <div class="col-md-9 col-sm-7 col-xs-12<?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
+                        <div class="col-md-9 col-sm-7 col-xs-12 cont<?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
 							<span class="h1_span <?if( $pathArr[1] == "catalog" && $pathArr[3] != "" ):?>detail_page_title<?endif;?>"><?=$APPLICATION->ShowTitle(false)?></span>
                             <?if ( $APPLICATION->GetCurPage() != "/" ):?>
 	                            <?$APPLICATION->IncludeComponent(

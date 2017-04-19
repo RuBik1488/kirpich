@@ -98,6 +98,14 @@ h3 {
     font-weight: 900;
     font-family: "HeliosCondRegular";
 }
+#bought .h2_span {
+    display: flex;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "HeliosCondRegular";
+    justify-content: center;
+    background: #fff;
+}
 .wr_left_menu {
     margin-top:-60px;
 }
@@ -116,7 +124,7 @@ p {
 }
 
 a:hover {
-    color: #fff;
+    color: #333;
     text-decoration: underline;
 }
 a.btn-kirpich, a.btn-kirpich:focus {
@@ -1093,11 +1101,33 @@ span.q_count {
     font-weight: bold;
     font-size: 15px;
 }
-
+.cont {
+    text-align: justify;
+}
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
 		font-size: 16px;
 	}
+}
+@media (max-width: 1364px) and (min-width: 1100px){
+    .count_plus, .count_minus {
+        background-color: #fff;
+        width: inherit;
+        margin: 0px 3px;
+        vertical-align: middle;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    span.h3_span,.cart table tr {
+        font-size: 14px;
+    }
+    .h3_span textarea {
+        width: 42px;
+    }
 }
 @media (min-width: 1250px) and (max-width: 1430px) {
     #navbar ul li a {
@@ -1360,6 +1390,18 @@ span.q_count {
 	#left-menu li.its_parent {
 		position: relative;
 	}
+    #left-menu li {
+        width: 100%;
+    }
+    .wr_left_menu .h2_span {
+        width: 100%;
+    }
+    .col-md-9 {
+        width: 100%;
+    }
+    #bottom_header .center-header-block {
+        height: 105px;
+    }
 	#left-menu a.link-mobile {
 		    position: absolute;
 			right: 20px;
@@ -1408,6 +1450,19 @@ span.q_count {
     }
     a#back-top {
         bottom: 150px;
+    }
+    .center-header-block {
+        display: flex;
+        align-items: center;
+    }
+    #search_box_container {
+        width: 100%;
+    }
+    #logo {
+        display: none;
+    }
+    .wr_phone_up {
+        margin-top: 0;
     }
 }
 @media (max-width: 640px) {
@@ -1524,7 +1579,7 @@ span.q_count {
 }
 @media (max-width: 766px) {
     .hidden-xs {
-        display: block;
+        display: block!important;
     }
 }
 
