@@ -62,7 +62,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                 <div class="row">
                 	<div style="display:none;">
 						<div id="bought">
-							<span class="h2_span">
+							<span class="h2_span mobile_scroll">
 								Товар успешно добавлен!
 							</span><br>
 							<a href="/cart/index.php" class="cart-buttons">
@@ -221,7 +221,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                                 <?endforeach;?>
 
                                 <img src="/images/basket.png" alt="">
-                                <a href="/cart/"><span>Корзина (<?=count($_SESSION['CART']);?>) <?=number_format($price, 2, '.', ' ')?></span></a>
+                                <a href="/cart/"><span>Корзина <span class="no_b">(<?=count($_SESSION['CART']);?>)</span> <?=number_format($price, 2, '.', ' ')?> <i class="fa fa-rub" aria-hidden="true"></i></span></a>
                             </div>
                         </div>
                         <!---------------------------------------------------------------------------------->
@@ -338,7 +338,7 @@ jQuery(document).ready(function(){
                             <?endforeach;?>
 
                             <img src="/images/basket.png" alt="">
-                            <a href="/cart/"><span>Корзина (<?=count($_SESSION['CART']);?>) <?=number_format($price, 2, '.', ' ')?></span></a>
+                            <a href="/cart/"><span>Корзина<span class="no_b">(<?=count($_SESSION['CART']);?>)</span> <?=number_format($price, 2, '.', ' ')?> <i class="fa fa-rub" aria-hidden="true"></i></span></a>
                         </div>
                 </div>
             </div>
@@ -352,7 +352,8 @@ jQuery(document).ready(function(){
              		 <div class="col-md-3 col-sm-5 col-xs-12" id="left_sidebar">
 
                          <div class="wr_left_menu">
-						 <span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>"><a href="/catalog/" class="catalog-sidbar-link">Каталог продукции</a></span>
+						 <span class="h2_span <?if( $city != "" && CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>"><a href="/catalog/" class="catalog-sidbar-link">Каталог продукции <img
+                                         src="/images/vk.png" alt=""></a></span>
                             <?$APPLICATION->IncludeComponent(
 								"bitrix:catalog.section.list",
 								"left_menu",
