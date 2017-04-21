@@ -192,6 +192,7 @@ select {
     border: none;
     font: 14px/30px HeliosCondRegular,sans-serif;
     margin-left: 6px;
+    margin-top: 2px;
     padding:0;
     background: #ffebd8;
     color: #ff4000;
@@ -240,9 +241,7 @@ select:focus {
 }
 #top_header .city-area {
     position: relative;
-    margin-top: 5px;
-    position: relative;
-    margin-top: 5px;
+    margin-top: 3px;
     display: flex;
     width: 280px;
     align-items: center;
@@ -882,7 +881,7 @@ a#get_kp_button {
     right: 47px;
     position: fixed;
     transition: all 0.2s ease-in-out 0s;
-    width: 258px;
+    width: 173px;
     z-index: 8000;
 }
 
@@ -1113,7 +1112,7 @@ span.q_count {
     display: flex;
     background: #ff9100;
     height: 38px;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-left: 0px;
     align-items: center;
     width: 248px;
@@ -1209,7 +1208,7 @@ span.q_count {
         margin-top: -76px;
     }
     .wr_phone {
-        margin-top: 21px;
+        margin-top: 26px;
     }
 }
 @media (min-width: 992px) and (max-width: 1400px) {
@@ -1351,14 +1350,16 @@ span.q_count {
 	a.btn-kirpich {
 		font-size: 18px;
 		width: 300px;
-		    margin: 0 auto;
-    display: block;
+        margin: 0 auto;
+        display: block;
 	}
     #bottom_header, .content, footer {
         padding: 0px;
     }
     #top_header .city-area {
         margin: 0 auto;
+        justify-content: flex-end;
+
     }
     footer {
         padding: 15px 10px 30px 10px;
@@ -1421,12 +1422,12 @@ span.q_count {
         width: 58%;
     }
     .wr_left_menu {
-        margin-top: 0px;
+        margin-top: -15px;
     }
     .wr_phone_up {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
     }
 }
 @media (max-width: 768px) {
@@ -1512,9 +1513,6 @@ span.q_count {
     }
     #logo {
         display: none;
-    }
-    .wr_phone_up {
-        margin-top: 0;
     }
 }
 @media (max-width: 640px) {
@@ -1616,9 +1614,6 @@ span.q_count {
   header #bottom_header hr.bottom-hr {
     display:none;
   }
-  header .center-header-block {
-    margin-top:10px;
-  }
   header #bottom_header nav {
     margin:0px;
     min-height:0px;
@@ -1680,6 +1675,9 @@ body {
   list-style-type: none;
   font-size: 18px;
   line-height: 1.8em;
+}
+#mobileMenu .h2_span a img {
+    display: none;
 }
 
 #mobileMenu a:hover
