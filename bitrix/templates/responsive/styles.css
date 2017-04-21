@@ -1320,6 +1320,9 @@ span.q_count {
 	.see-mobile {
 		display: inline !important;
 	}
+    .see-mobile.bekon {
+        display: block !important;
+    }
 	.link-mobile.see-mobile {
 		display: none !important;
 	}

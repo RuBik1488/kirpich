@@ -18,7 +18,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <title><?$APPLICATION->ShowTitle()?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
 	<?$APPLICATION->ShowHead()?>
 <?
 	include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/canonical.php");
