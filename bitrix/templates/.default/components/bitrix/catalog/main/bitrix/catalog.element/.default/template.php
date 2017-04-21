@@ -421,7 +421,7 @@
                     <script src="/js/calc.js"></script>
                     <section class="cost">
                         <div class="form-one">
-                            <div class="form-one-top">
+                            <p class="form-one-top">
                                 <h3>Расчет доставки <span>*</span></h3>
                                 <?
                                 if ($arResult['PROPERTIES']['STORAGE']['VALUE'] == "Тула") {
@@ -495,6 +495,10 @@
                                         <div style="clear: both;"></div>
                                     </div>
                                 </div>
+                                <p style="display:none;" id="rz_dostavka">
+                                    <input style="width:15px;margin:0;height:15px;" type="checkbox" id="ruz_dostavka" value="1">
+                                    <label for="ruz_dostavka">Добавить цену доставки в корзину</label>
+                                </p>
 								<p class="inform" style="text-align: left;">* Расчет предварительный, подтверждается менеджером.</p>
                                 <?if (isset($sht)):?>
                                     <p class="inform norma-inform" style="text-align: left;">Внимание! Сумма доставки в расчёте на 1 ед.

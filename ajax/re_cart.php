@@ -3,7 +3,7 @@
                                     <img src="/images/basket.png" alt="">
 								</a>
 								
-								<span>Корзина (<?=count($_SESSION['CART']);?>)</span>
+                                <span>Корзина<span class="no_b">(<?=count($_SESSION['CART']);?>)</span></span>
 								<?CModule::IncludeModule('iblock');?>
 								<?$price=0;?>
 									<?foreach($_SESSION['CART'] as $key=>$arItem):?>
