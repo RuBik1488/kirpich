@@ -90,7 +90,7 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
 								$cc = 0;
 							?>   
 								<div class="city-area">
-									<span>Ваш город: </span>
+									<span>Ваш город:  </span>
 									<?if( $city == "" && $firstVisit == "" ):?>
 											<script>
 												$.getJSON("http://api.sypexgeo.net/json/<?echo $_SERVER['REMOTE_ADDR'];?>", function(data){
