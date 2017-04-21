@@ -159,6 +159,56 @@ $(document).ready(function(){
 					<td class="see-mobile"><span class="h3_span"><b>Общая стоимость:</b> <?=number_format($price, 2, '.', ' ')?> <i class="fa fa-rub" aria-hidden="true"></i></span></td>
 				</tr>
 
+
+                <tr class="all-cost-cart">
+                    <td style="text-align:left;" colspan="9" class="hidden-mobile">
+                        <span class="h3_span"><b>Доставка</b></span>
+                    </td>
+                </tr>
+                <?foreach($_SESSION['CART']['dostavka'] as $key=>$arItem):?>
+                    <tr class="all-cost-cart">
+                        <td style="text-align:left;" colspan="4" class="hidden-mobile">
+                            <span class="h3_span">Доставка товара: <?=$arItem['dost_product']?></span>
+                        </td>
+                        <td style="text-align:left;" colspan="3" class="hidden-mobile">
+                            <span class="h3_span">Откуда\куда: <?=$arItem['dost_name']?></span>
+                        </td>
+                        <td colspan="3" class="hidden-mobile">
+                        <span class="h3_span">
+                            <?=rtrim(rtrim(number_format($arItem['dost_price'], 2, '.', ' '),'0'),'.')?>
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </span>
+                        </td>
+                    </tr>
+                <?endforeach;?>
+
+                <?foreach($_SESSION['CART']['dostavka'] as $key=>$arItem):?>
+                    <tr class="all-cost-cart">
+                        <td class="see-mobile bekon">
+                        <span class="h3_span">
+                            <b>Доставка:</b>
+                        </span>
+                        </td>
+                        <td class="see-mobile bekon">
+                        <span class="h3_span">
+                            Доставка товара:  <?=$arItem['dost_product']?>
+                        </span>
+                        </td>
+                        <td class="see-mobile bekon">
+                        <span class="h3_span">
+                            Откуда\куда: <?=$arItem['dost_name']?>
+                        </span>
+                        </td>
+                        <td class="see-mobile bekon">
+                        <span class="h3_span">
+                            <?=rtrim(rtrim(number_format($arItem['dost_price'], 2, '.', ' '),'0'),'.')?>
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </span>
+                        </td>
+                    </tr>
+                <?endforeach;?>
+
+
 			</table>
             <?php
             // Заказ клиента
