@@ -367,7 +367,7 @@
                             <label for="edit-qty">Единиц товара:</label>
                             <input type="hidden" value="<?= $arResult["ID"] ?>" id="detail_id_item">
                             <span class="count_minus " data-count="<?= $poddon ?>">-</span>
-                            <input id="edit-qty" data-qty="<?= $norma/*$poddon*/ ?>" data-step="<?= $poddon ?>" <?if (isset($sht)):?>data-sht="<?=$sht?>"<?endif;?> type="text" maxlength="6" name="quantity" size="5" value="<?= rtrim(rtrim(number_format($norma/*$poddon*/, 2, '.', ' '),"0"),".") ?>" class="form-text required">
+                            <input id="edit-qty" data-qty="<?= $norma/*$poddon*/ ?>" data-step="<?= $poddon ?>" <?if (isset($sht)):?>data-sht="<?=$sht?>"<?endif;?> type="text" maxlength="6" name="quantity" size="5" value="<?= rtrim(rtrim(number_format($norma/*$poddon*/, 2, '.', ''),"0"),".") ?>" class="form-text required">
                             <span class="count_plus" data-count="<?= $poddon ?>">+</span>
                         </div>
                         <br>

@@ -224,7 +224,7 @@ function detailCount(quantity, id)
             $('.poddon_count').text(number_format(quantity, 2, '.', ' '));
             $('#outprc b').text(data.total_price);
             $('.addCartButton').attr('data-poddon', quantity);
-            $("#edit-qty").attr("data-qty", quantity).val(number_format(quantity, 2, '.', ' '));
+            $("#edit-qty").attr("data-qty", quantity).val(number_format(quantity, 2, '.', ''));
             $("#get_kredit_form").attr({'data-sign': data.sign, 'data-order': data.base64});
             //доставка
             var total_sum = $('#priceform').val();
