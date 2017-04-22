@@ -939,6 +939,9 @@ select::-ms-expand {
   display: none;
 
 }
+input[name=dimension]:checked+label{
+  opacity: 1;
+}
 label.for-radio1 {
   background: url('/images/5t.png') no-repeat;
   background-size: 42px;
@@ -946,6 +949,9 @@ label.for-radio1 {
   height: 42px;
   display: block;
   cursor: pointer;
+  padding-top: 35px;
+  margin-right: 10px;
+  opacity: 0.3;
 }
 label.for-radio2 {
   background: url('/images/10t.png') no-repeat;
@@ -954,6 +960,9 @@ label.for-radio2 {
   height: 42px;
   display: block;
   cursor: pointer;
+  padding-top: 35px;
+  margin-right: 10px;
+  opacity: 0.3;
 }
 label.for-radio3 {
   background: url('/images/20t.png') no-repeat;
@@ -962,6 +971,9 @@ label.for-radio3 {
   height: 42px;
   display: block;
   cursor: pointer;
+  padding-top: 35px;
+  margin-right: 10px;
+  opacity: 0.3;
 }
 .cal .wh_wh {
   display: flex;
@@ -1042,7 +1054,7 @@ input[type="submit"] {
   margin-top: 83px;
   background: #ffebd8;
   padding: 10px;
-  width: 290px;
+  /*width: 290px;*/
 }
 
 .col3 .wr_raschet .title {

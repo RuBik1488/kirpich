@@ -4,14 +4,18 @@ $APPLICATION->SetTitle("Доставка");
 $APPLICATION->SetPageProperty("description", "Компания МиксТрейд осуществляет доставку строго в указанное место. Доставка может осуществляться как малотоннажным, так и большегрузным грузовым транспортом. Способ доставки зависит от количества груза и маршрута перевозки. Поэтому в каждом отдельном случае стоимость доставки будет рассчитываться индивидуально.");
 $APPLICATION->SetPageProperty("keywords", "доставка");
 $APPLICATION->SetPageProperty("title", "Условия доставки стройматериалов");
+
+$APPLICATION->SetAdditionalCSS("/iteamo/plugins/deliveryCalc/css/main.css");
+//$APPLICATION->AddHeadScript("/iteamo/plugins/deliveryCalc/js/calc.js");
+
 ?><p class="MsoNormal">
 	 Наша компания осуществляет доставку строго в указанное место. Доставка может осуществляться как малотоннажным, так и большегрузным грузовым транспортом. Предварительный расчет стоимости доставки можно произвести ниже.&nbsp;
 </p>
 <p class="MsoNormal">
 	Цена в калькуляторе является предварительной. Для точного расчета стоимости перевозки оставьте запрос менеджеру
 </p>
-<?// ===================================================================================== ?>
-<?/*?>
+
+<?/*
 <p class="MsoNormal"><b><font size="4">Расчет цен доставки по республике Мордовия по газосиликатным блокам</font></b></p>
 <div class="table-responsive">
 <table class="MsoNormalTable table delivery-table" border="0" cellspacing="0" cellpadding="0" width="596" style="width: 470.3pt;">
@@ -372,7 +376,122 @@ $APPLICATION->SetPageProperty("title", "Условия доставки стро
  </tbody>
 </table>
 </div>
-<?// */?>
-<?// ===================================================================================== ?>
+*/?>
+<?/*
 <iframe name="calc" width="100%" height="460px" src="/iteamo/plugins/deliveryCalc/" frameborder="no" allowtransparency=""></iframe>
-<?// ===================================================================================== ?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+*/?>
+
+    <section class="cost">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="block col-md-9 col-sm-6 col-xs-12">
+                    <div class="form-one">
+                        <div class="form-one-top">
+                            <div class="cal">
+                                <h3>Калькулятор доставки</h3>
+                                <div class="bg_cal">
+                                    <form action="#" class="сal-form">
+                                        <div class="wh_wh">
+                                            <div>
+                                                <p><label for="form">Откуда</label></p>
+                                                <input id="from" name="Whence" type="text" placeholder="">
+                                            </div>
+                                            <span><img src="/images/wh.png" alt=""></span>
+                                            <div>
+                                                <p><label for="where">Куда</label></p>
+                                                <input id="where" name="where" type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="delivery">
+                                            <div class="trans">
+                                                <p><label for="delivery">Вид транспорта</label></p>
+                                                <div class="select_main">
+                                                    <select id="kind" name="freight_type">
+                                                        <option disabled selected>Выберите транспорт</option>
+                                                        <option value="1">Тентованный</option>
+                                                        <option value="2">Изотермический</option>
+                                                        <option value="3">Контейнеровоз</option>
+                                                        <option value="4">Бортовой</option>
+                                                        <option value="5">Негабаритная площадка</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="wr_tonn">
+                                                <p><label for="tonn">Объем</label></p>
+                                                <div class="tonn">
+                                                    <div class="kuby">
+                                                        <input data-val="до 5 тонн (30м)" checked id="for-radio1" name="dimension" type="radio" value="1"/>
+                                                        <label for="for-radio1" class="for-radio1">
+                                                            <span>до 30 м<sup><small>3</small></sup></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="kuby">
+                                                        <input data-val="до 10 тонн (50м)" id="for-radio2" name="dimension" type="radio" value="2"/>
+                                                        <label for="for-radio2" class="for-radio2">
+                                                            <span>до 50 м<sup><small>3</small></sup></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="kuby">
+                                                        <input data-val="до 20 тонн (120м)" id="for-radio3" name="dimension" type="radio" value="3">
+                                                        <label for="for-radio3" class="for-radio3">
+                                                            <span>до 120 м<sup><small>3</small></sup></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cal_sub">
+                                            <input type="submit" class="submit-deli" value="Стоимость доставки"/>
+                                            <img src="/images/wh.png" alt="">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block col-md-3 col-sm-6 col-xs-12" style="top: -25px; left: -45px;">
+                    <div class="col3">
+                        <div class="wr_raschet">
+                            <span class="title">Расчет доставки</span>
+                            <div class="wr_in">
+                                <span class=lab>Откуда</span>
+                                <span id="get-in" class="in"></span>
+                            </div>
+                            <div class="wr_in">
+                                <span class=lab>Куда</span>
+                                <span id="get-out" class="in"></span>
+                            </div>
+                            <div class="wr_in">
+                                <span class=lab>Объем</span>
+                                <span id="get-weight" class="in"></span>
+                            </div>
+                            <div class="summ">
+                                <div class="ras">
+                                    <span>Дистанция:</span>
+                                    <span class="itog">
+                                        <strong id="distance">0 км</strong>
+                                    </span>
+                                </div>
+                                <div class="ras">
+                                    <span>Цена:</span>
+                                    <span class="itog">
+                                        <strong id="price">0 <i class="fa fa-rub" aria-hidden="true"></i></strong>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBUYNH6x8bzJvNzXNFQs_AwIkpq1OABZPE&libraries=places" type="text/javascript"></script>
+    <script src="/iteamo/plugins/deliveryCalc/params.js" type="text/javascript"></script>
+    <script src="/iteamo/plugins/deliveryCalc/js/calc.js" type="text/javascript"></script>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
