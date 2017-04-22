@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="css/main.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBUYNH6x8bzJvNzXNFQs_AwIkpq1OABZPE&libraries=places" type="text/javascript"></script>
+    <script src="/js/script.js"></script>
+    <script type="text/javascript" src="/js/fancybox/jquery.fancybox.js"></script>
+    <script src="params.js"></script>
+    <script src="/js/calc.js"></script>
 </head>
 <body>
 <section class="cost"><div class="container-fluid">
@@ -140,17 +147,13 @@
                       <span class="in">до 10 тонн (50м)</span>
                   </div>
                   <div class="summ">
-                      <div class="ras"><span>Дистанция:</span><span class="itog">468м</span></div>
-                      <div class="ras"><span>Цена:</span><span class="itog">15679 <i class="fa fa-rub" aria-hidden="true"></i></span></span></div>
-                      <div class="ras"><span>Удорожание:</span><span class="itog">0 <i class="fa fa-rub" aria-hidden="true"></i>/шт.</span></span></div>
+                      <div class="ras"><span>Дистанция:</span><span class="itog"><strong id="distance">0 км</strong></span></div>
+                      <div class="ras"><span>Цена:</span><span class="itog"><strong id="price">0 <i class="fa fa-rub" aria-hidden="true"></i></strong></span></span></div>
+                      <div class="ras"><span>Удорожание:</span><span class="itog"><strong id="plus_price"><span id="plus_price_val">0</span> <i class="fa fa-rub" aria-hidden="true"></i></strong></span></span></div>
                   </div>
               </div>
           </div>
       </div>
 </div></section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBUYNH6x8bzJvNzXNFQs_AwIkpq1OABZPE&libraries=places" type="text/javascript"></script>
-<script src="params.js"></script>
-<script src="js/calc.js"></script>
 </body>
 </html>
