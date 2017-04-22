@@ -385,7 +385,7 @@ $APPLICATION->SetAdditionalCSS("/iteamo/plugins/deliveryCalc/css/main.css");
         <div class="container-fluid">
             <div class="row">
 
-                <div class="block col-md-9 col-sm-6 col-xs-12">
+                <div class="block col-md-8 col-sm-6 col-xs-12">
                     <div class="form-one">
                         <div class="form-one-top">
                             <div class="cal">
@@ -452,7 +452,7 @@ $APPLICATION->SetAdditionalCSS("/iteamo/plugins/deliveryCalc/css/main.css");
                     </div>
                 </div>
 
-                <div class="block col-md-3 col-sm-6 col-xs-12" style="top: -25px; left: -45px;">
+                <div class="block col-md-4 col-sm-6 col-xs-12" style="top: -25px; left: -45px;">
                     <div class="col3">
                         <div class="wr_raschet">
                             <span class="title">Расчет доставки</span>

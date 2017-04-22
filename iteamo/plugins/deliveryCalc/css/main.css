@@ -880,6 +880,7 @@
   margin-top: 20px;
   width: 700px;
   color: #333;
+  margin-bottom: 30px;
 }
 .cal h3 {
   font-family: "HeliosCondRegular";
@@ -985,7 +986,6 @@ label.for-radio3 {
   font-family: "HeliosCondRegular";
 }
 .cal .delivery {
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1034,27 +1034,24 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 37px;
 }
  .bg_cal .cal_sub img {
   margin-left: -18px;
   width: 10px;
 }
 
-.col3 .wr_raschet{
+.col3 .wr_raschet {
   margin-top: 83px;
   background: #ffebd8;
   padding: 10px;
-  width: 200px;
+  width: 290px;
   margin-left: 69px;
   font-family: "HeliosCondRegular";
-}
-.col3 .wr_raschet{
-  margin-top: 83px;
-  background: #ffebd8;
-  padding: 10px;
-  /*width: 290px;*/
+  height: 287px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .col3 .wr_raschet .title {
@@ -1069,7 +1066,7 @@ input[type="submit"] {
   float:left;
 }
 .wr_in {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 .wr_in .lab {
   color: #888;
@@ -1077,10 +1074,9 @@ input[type="submit"] {
   display: block;
 }
 .col3 .summ {
-  margin-top: 27px;
+  padding-top: 13px;
   display: flex;
   flex-direction: column;
-  padding: 0px 0 0px 0;
 }
 .col3 .summ .ras {
   display: flex;
@@ -1105,4 +1101,70 @@ input[type="submit"] {
 .fa-rouble:before,
 .fa-rub:before {
   content: "\f158";
+}
+@media (max-width: 1495px) {
+  .cal input[type="text"]{
+    width: 220px;
+  }
+  .select_main select {
+    width: 220px;
+    background-position: 192px center;
+  }
+  .delivery .wr_tonn {
+    width: 220px;
+  }
+  .delivery .trans {
+    margin-right: 15px;
+  }
+  .cal {
+    width: 607px;
+  }
+}
+@media (max-width: 1300px) {
+  .cal {
+    width: 548px;
+  }
+}
+@media (max-width: 1245px) {
+  .row .block {
+    display: block;
+    clear: both;
+  }
+  .col3 .wr_raschet {
+    margin-top: 30px;
+    margin-left: 46px;
+    width: 548px;
+    font-size: 18px;
+  }
+  .wr_in .lab {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .cal .wh_wh {
+    display: block;
+  }
+  .cal .wh_wh span img {
+    display: none;
+  }
+  .cal .wh_wh span {
+    margin: 0;
+  }
+  .cal .delivery {
+    display: block;
+  }
+  .cal {
+    width: 365px;
+  }
+  .col3 .wr_raschet {
+    width: 250px;
+  }
+  .cal input[type="text"] {
+    width: 300px;
+  }
+  .col3 .wr_raschet {
+    width: 366px;
+    font-size: 16px;
+  }
+
 }

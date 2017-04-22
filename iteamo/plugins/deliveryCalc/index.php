@@ -16,7 +16,7 @@
 <body>
 <section class="cost"><div class="container-fluid">
     <div class="row">
-      <div class="block col-md-9 col-sm-6 col-xs-12">
+      <div class="block col-md-8 col-sm-6 col-xs-12">
         <div class="form-one">
           <div class="form-one-top">
           <div class="cal">
