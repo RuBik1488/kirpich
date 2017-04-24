@@ -43,7 +43,6 @@ $APPLICATION->SetPageProperty("title", "Варианты оплаты строй
 
 
 <h1>Покупка в кредит</h1>
-<img style="float: right" src="/images/Placeholder.gif"/>
 <p>Покупка в кредит - простой, удобный и современный способ покупки товаров в интернет-магазине.</p>
 <p>Преимущества онлайн-кредитования:</p>
 <ul>
@@ -70,7 +69,9 @@ $APPLICATION->SetPageProperty("title", "Варианты оплаты строй
 </ul>
 <p>По вопросам, связанным с выдачей кредита, обращаться в АО &laquo;Тинькофф Банк&raquo; на горячую линию:</p>
 <p>8 (800) 555-08-08 (звонок по России бесплатный и круглосуточный). &nbsp;</p>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/-ZRSMYqM3I8" frameborder="0" allowfullscreen></iframe>
-
+<div class="oplata_youtube">
+    <iframe src="https://www.youtube.com/embed/-ZRSMYqM3I8" frameborder="0" allowfullscreen></iframe>
+    <img src="/images/Placeholder.gif"/>
+</div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

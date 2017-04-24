@@ -875,14 +875,17 @@ a#back-top:hover {
     transition: all 0.2s ease-in-out 0s;
 }
 a#get_kp_button {
-    bottom: -8px;
+    bottom: 0px;
     cursor: pointer;
     display: block;
-    right: 47px;
+    right: 20px;
     position: fixed;
     transition: all 0.2s ease-in-out 0s;
     width: 173px;
     z-index: 8000;
+}
+a#get_kp_button img {
+    width: 150px;
 }
 
 .modal_content {
@@ -1154,6 +1157,13 @@ span.q_count {
 .cont {
     text-align: justify;
 }
+.oplata_youtube img {
+    float: right;
+}
+.oplata_youtube iframe {
+    width: 70%;
+    height: 400px;
+}
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
 		font-size: 16px;
@@ -1195,7 +1205,7 @@ span.q_count {
     }
 
     #search_box_container .input {
-        width: 460px;
+
         margin-left: 60px;
     }
     .wr_phone span a {
@@ -1209,6 +1219,12 @@ span.q_count {
     }
     .wr_phone {
         margin-top: 26px;
+    }
+    .col3 .wr_raschet {
+        margin-left:20px;
+    }
+    .oplata_youtube iframe {
+        width: 60%;
     }
 }
 @media (min-width: 992px) and (max-width: 1400px) {
@@ -1290,6 +1306,11 @@ span.q_count {
 		font-size: 13px;
 	}
 }
+@media (max-width: 1300px) {
+    .col3 .wr_raschet {
+    margin-left:0;
+    }
+}
 @media (max-width: 1178px) {
     #get_kp_modal label {
         font-size: 12px;
@@ -1347,6 +1368,11 @@ span.q_count {
     }
     .basket span {
         font-size: 13px;
+    }
+}
+@media (max-width: 1019px) {
+    .basket {
+        margin-left: 14px;
     }
 }
 @media (max-width: 991px) {
@@ -1431,6 +1457,14 @@ span.q_count {
         display: flex;
         justify-content: center;
         margin-top: 15px;
+    }
+    .oplata_youtube img {
+        float: none;
+        margin-bottom:10px;
+    }
+    .oplata_youtube iframe {
+        height: 287px;
+        width: 95%;
     }
 }
 @media (max-width: 768px) {
@@ -1517,6 +1551,12 @@ span.q_count {
     #logo {
         display: none;
     }
+    #get_kp_button img {
+        width: 140px;
+    }
+    a#get_kp_button {
+        width: 140px;
+    }
 }
 @media (max-width: 640px) {
 	#get_kp_modal {
@@ -1546,6 +1586,17 @@ span.q_count {
 	#get_kp_modal {
 		width: 300px;
 	}
+}
+@media (max-width: 413px) {
+    .cal {
+        width: 280px;
+    }
+    .cal input[type="text"] {
+        width: 245px;
+    }
+    .col3 .wr_raschet {
+        width: 279px;
+    }
 }
 @media (max-width: 380px) {
 	#get_kp_modal,ul.select-city-user{
@@ -1590,7 +1641,6 @@ span.q_count {
 @media (max-width: 1329px) and (min-width: 1160px) {
   #navbar ul li a {
     font-size: 13px;
-    padding: 10px 8px;
   }
 }
 @media (max-width: 1252px) and (min-width: 1160px) {

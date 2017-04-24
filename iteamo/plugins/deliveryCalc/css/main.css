@@ -1048,7 +1048,7 @@ input[type="submit"] {
   width: 290px;
   margin-left: 69px;
   font-family: "HeliosCondRegular";
-  height: 287px;
+  height: 288px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1125,14 +1125,14 @@ input[type="submit"] {
     width: 548px;
   }
 }
-@media (max-width: 1245px) {
+@media (max-width: 1260px) {
   .row .block {
     display: block;
     clear: both;
   }
   .col3 .wr_raschet {
     margin-top: 30px;
-    margin-left: 46px;
+    margin-left: 46px!important;
     width: 548px;
     font-size: 18px;
   }
