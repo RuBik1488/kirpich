@@ -12,7 +12,6 @@
 /*}*/
 
 
-
 @font-face {
     font-family: "HeliosCondRegular";
     src: url("/bitrix/templates/responsive/fonts/HeliosCondRegular/HeliosCondRegular.eot");
@@ -875,7 +874,7 @@ a#back-top:hover {
     transition: all 0.2s ease-in-out 0s;
 }
 a#get_kp_button {
-    bottom: 0px;
+    bottom: 7px;
     cursor: pointer;
     display: block;
     right: 20px;
@@ -1552,10 +1551,10 @@ span.q_count {
         display: none;
     }
     #get_kp_button img {
-        width: 140px;
+        width: 130px;
     }
     a#get_kp_button {
-        width: 140px;
+        width: 130px;
     }
 }
 @media (max-width: 640px) {
