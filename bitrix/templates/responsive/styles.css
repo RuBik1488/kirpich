@@ -1367,7 +1367,7 @@ span.q_count {
         width: 200px;
     }
     .basket span {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 @media (max-width: 1019px) {
@@ -1602,6 +1602,19 @@ span.q_count {
 	#get_kp_modal,ul.select-city-user{
 		width: 250px;
 	}
+    .wr_left_menu .h2_span a {
+        font-size: 21px;
+    }
+    .delivery .trans {
+        width: 250px;
+    }
+    .wr_raschet {
+        width: 265px!important;
+    }
+    .cal {
+        width: 266px;
+    }
+
 }
 
 .borderline {
