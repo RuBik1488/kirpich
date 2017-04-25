@@ -509,7 +509,6 @@ select:focus {
 }
 #left-menu .selected a:hover {
     background: url("/images/li_a.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
-    color: #fff;
 }
 #left-menu .current .selected {
     background: url("/images/li2.png") no-repeat scroll 10px center rgba(0, 0, 0, 0);
@@ -1163,6 +1162,11 @@ span.q_count {
     width: 70%;
     height: 400px;
 }
+#ruz_dostavka {
+    width:17px;
+    margin:0;
+    height:17px;
+}
 @media (max-width: 1600px) {
 	.cart th,.cart span.h3_span {
 		font-size: 16px;
@@ -1556,6 +1560,10 @@ span.q_count {
     a#get_kp_button {
         width: 130px;
     }
+    #ruz_dostavka {
+        height: 23px!important;
+        width: 23px;
+    }
 }
 @media (max-width: 640px) {
 	#get_kp_modal {
@@ -1595,6 +1603,7 @@ span.q_count {
     }
     .col3 .wr_raschet {
         width: 279px;
+        height: 310px;
     }
 }
 @media (max-width: 380px) {

@@ -496,7 +496,7 @@
                                     </div>
                                 </div>
                                 <p style="display:none;" id="rz_dostavka">
-                                    <input style="width:15px;margin:0;height:15px;" type="checkbox" id="ruz_dostavka" value="1">
+                                    <input type="checkbox" id="ruz_dostavka" value="1">
                                     <label for="ruz_dostavka">Добавить цену доставки в корзину</label>
                                 </p>
 								<p class="inform" style="text-align: left;">* Расчет предварительный, подтверждается менеджером.</p>
