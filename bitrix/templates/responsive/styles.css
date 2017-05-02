@@ -275,6 +275,10 @@ select:focus {
 #top_header .top-info-phone img {
 	margin-top: -3px;
 }
+.main-top-phone {
+    display: flex;
+    align-items: center;
+}
 #top_header .main-top-phone {
 	float: left;
 }

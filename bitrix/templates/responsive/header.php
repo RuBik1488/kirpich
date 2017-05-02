@@ -194,8 +194,16 @@ $r=substr_count($_SERVER['HTTP_USER_AGENT'], "Bond");
                         </div>
                         <!---------------------------------------------------------------------------------->
                         <div class="wr_phone_up">
-                            <img src="/images/phone.png" alt="">
-                            <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
+                                <?$APPLICATION->IncludeComponent(
+                                							"bitrix:main.include",
+                                							"",
+                                							Array(
+                                								"AREA_FILE_SHOW" => "file",
+                                								"PATH" => "/inc/phone-pict.php",
+                                								"EDIT_TEMPLATE" => ""
+                                							),
+                                						false
+                                );?>
                         </div>
                         <div class="nones">
                             <div class="basket_up cart-container">
@@ -312,8 +320,16 @@ jQuery(document).ready(function(){
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="wr_phone">
-                            <img src="/images/phone.png" alt="">
-                            <span><a href="tel:+78342317311">+7 (8342) 317-311</a></span>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => "/inc/phone-pict.php",
+                                    "EDIT_TEMPLATE" => ""
+                                ),
+                                false
+                            );?>
                         </div>
                         <div class="basket cart-container">
 
@@ -376,12 +392,12 @@ jQuery(document).ready(function(){
                            <div class="cart-open <?if($_SESSION['NO_SHOW']==1) echo 'closed';?>"></div>
                          </div>
                         </div>
-                        <div class="col-md-9 col-sm-7 col-xs-12 cont<?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
+                        <div class="col-md-9 col-sm-7 col-xs-12 <?if( !CSite::InDir('/index.php') ):?>mobile_scroll<?endif;?>">
 							<span class="h1_span <?if( $pathArr[1] == "catalog" && $pathArr[3] != "" ):?>detail_page_title<?endif;?>"><?=$APPLICATION->ShowTitle(false)?></span>
                             <?if ( $APPLICATION->GetCurPage() != "/" ):?>
 	                            <?$APPLICATION->IncludeComponent(
-									"bitrix:breadcrumb", 
-									".default", 
+									"bitrix:breadcrumb",
+									".default",
 									array(
 										"START_FROM" => "0",
 										"PATH" => "",
