@@ -227,7 +227,6 @@ select:focus {
     height: 40px;
     background: #ffebd8;
     font-weight: 900;
-    overflow: hidden;
 }
 #top_header  .logo-top {
 	font-size: 18px;
@@ -756,7 +755,7 @@ select:focus {
     z-index: 100;
     min-width:200px;
     max-width: 300px;
-    padding: 10px 20px;
+    padding: 10px 14px;
     background-color: #ff9000;
     background: linear-gradient(top,#ff9000 0,#ff4000 100%);
     background: -o-linear-gradient(top,#ff9000 0,#ff4000 100%);
@@ -771,6 +770,7 @@ select:focus {
     font-size: 13px;
     border-radius: 8px;
     box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.4);
+    font-weight: 600;
 }
 .cityQuestionPanel .cityQuestion:before {
     content: '';
